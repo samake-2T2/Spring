@@ -15,6 +15,14 @@
 	<!-- 2. 패키지를 읽어서 @Controller를 빈으로 만듭니다.(스프링 3버전 이상부터 사용가능) -->
 	<context:component-scan base-package="com.simple.controller" />
 	
-
-
+	<!-- 3. 뷰합성기 선언(컨트롤러에서 돌아온 결과의 최종경로를 만든다. -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	
+	<!-- 4. 정적파일 맵핑 js, css, img파일 같은 경우는 컨트롤러를 거치지 않고 바로 실행 -->
+	<mvc:resources location="/resource/" mapping="/resource/*"></mvc:resources>
+	
+	<!-- 빈으로 생성.................................. -->
 </beans>

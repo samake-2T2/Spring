@@ -11,7 +11,8 @@ public class TestController {
 		
 		System.out.println("실행됨");
 		
-		return "/WEB-INF/jsp/home.jsp"; // 디스패처 서블릿으로 돌아갈 경로
+//		return "/WEB-INF/jsp/home.jsp"; // 디스패처 서블릿으로 돌아갈 경로
+		return "home";
 		
 	}
 	
