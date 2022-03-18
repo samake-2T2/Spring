@@ -2,25 +2,36 @@ package com.simple.service;
 
 import java.util.ArrayList;
 
-import com.simple.command.BoardVO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
+import com.simple.command.BoardVO;
+import com.simple.dao.BoardDAO;
+
+@Service("boardService") // 컴포넌트 스캔확인.
 public class BoardServiceImpl implements BoardService {
 
+	@Autowired
+	@Qualifier("boardDAO")
+	BoardDAO boardDAO;
+	
 	@Override
 	public void boardRegist(BoardVO vo) {
-		// TODO Auto-generated method stub
+//		System.out.println("실행됨"); // 서비스 연결 확인
+		boardDAO.boardRegist(vo);
 		
 	}
 
 	@Override
 	public ArrayList<BoardVO> getList() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return boardDAO.getList();
 	}
 
 	@Override
 	public void boardDelete(int num) {
-		// TODO Auto-generated method stub
+		boardDAO.boardDelete(num);
 		
 	}
 
