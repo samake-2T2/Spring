@@ -1,0 +1,52 @@
+package com.coding404.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.coding404.command.FreeBoardVO;
+import com.coding404.freeboard.service.FreeBoardService;
+
+@Controller // 컴포넌트 스캔
+@RequestMapping("/freeBoard")
+public class FreeBoardController {
+	
+	@Autowired
+	@Qualifier("/freeBoardService")
+	FreeBoardService freeBoardService;
+	
+	// 화면처리
+	@RequestMapping("/freeRegist")
+	public String freeRegist() {
+		return "freeBoard/freeRegist";
+	}
+	
+	@RequestMapping("/freeList")
+	public String freeList() {
+		return "freeBoard/freeList";
+	}
+	
+	@RequestMapping("/freeDetail")
+	public String freeDetail() {
+		return "freeBoard/freeDetail";
+	}
+	
+	@RequestMapping("/freeModify")
+	public String freeModify() {
+		return "freeBoard/freeModify";
+	}
+	
+	// 등록 폼
+	@RequestMapping(value="/registForm", method= RequestMethod.POST)
+	public String registForm(FreeBoardVO vo) {
+		
+		System.out.println(vo.toString());
+		// 등록...
+		
+		return "redirect:/freeBoard/freeList"; // 리다이렉트
+	}
+	
+
+}

@@ -1,0 +1,8 @@
+package com.coding404.command;
+
+public class TestVO {
+
+	private String name;
+	private int age;
+	
+}

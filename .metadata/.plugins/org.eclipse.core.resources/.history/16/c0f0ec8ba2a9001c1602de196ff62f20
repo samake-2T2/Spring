@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+  "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+  
+  
+  <tiles-definitions>
+  	
+  	<!-- name에는 템플릿의 이름, template에는 파일의 경로가 들어간다. -->
+  	<definition name="basic" template="/WEB-INF/tiles/template.jsp">
+  		
+  	</definition>
+  	
+  </tiles-definitions>

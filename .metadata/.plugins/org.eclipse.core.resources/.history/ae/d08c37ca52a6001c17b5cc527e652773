@@ -1,0 +1,30 @@
+package com.simple.service;
+
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Service;
+
+import com.simple.command.BoardVO;
+
+@Service("boardService") // 컴포넌트 스캔확인.
+public class BoardServiceImpl implements BoardService {
+
+	@Override
+	public void boardRegist(BoardVO vo) {
+		System.out.println("실행됨"); // 서비스 연결 확인
+		
+	}
+
+	@Override
+	public ArrayList<BoardVO> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void boardDelete(int num) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.coding404.command;
+
+import lombok.Data;
+
+@Data // getter, setter를 자동생성
+public class TestVO {
+
+	private String name;
+	private int age;
+	private String addr;
+	
+}

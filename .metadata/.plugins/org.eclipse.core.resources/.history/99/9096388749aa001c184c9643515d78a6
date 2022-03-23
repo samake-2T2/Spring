@@ -1,0 +1,7 @@
+package com.coding404.freeboard.service;
+
+public interface FreeBoardMapper {
+	
+	public int regist(FreeBoardVO vo); // 등록
+
+}

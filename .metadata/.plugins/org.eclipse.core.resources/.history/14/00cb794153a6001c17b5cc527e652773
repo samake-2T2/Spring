@@ -1,0 +1,30 @@
+package com.simple.dao;
+
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Repository;
+
+import com.simple.command.BoardVO;
+
+@Repository
+public class BoardDAOImpl implements BoardDAO {
+
+	@Override
+	public void boardRegist(BoardVO vo) {
+		
+		
+	}
+
+	@Override
+	public ArrayList<BoardVO> getList() {
+		
+		return null;
+	}
+
+	@Override
+	public void boardDelete(int num) {
+		
+		
+	}
+
+}

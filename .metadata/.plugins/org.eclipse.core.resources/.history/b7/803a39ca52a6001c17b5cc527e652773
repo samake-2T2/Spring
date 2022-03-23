@@ -1,0 +1,27 @@
+package com.simple.dao;
+
+import java.util.ArrayList;
+
+import com.simple.command.BoardVO;
+
+public class BoardDAOImpl implements BoardDAO {
+
+	@Override
+	public void boardRegist(BoardVO vo) {
+		
+		
+	}
+
+	@Override
+	public ArrayList<BoardVO> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void boardDelete(int num) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

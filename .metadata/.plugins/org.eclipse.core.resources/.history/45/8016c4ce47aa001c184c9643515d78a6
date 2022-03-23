@@ -1,0 +1,7 @@
+package com.coding404.freeboard.service;
+
+public interface FreeBoardService {
+
+	public int regist(FreeBoardVO vo);
+
+}

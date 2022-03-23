@@ -1,0 +1,18 @@
+package com.coding404.freeboard.service;
+
+import org.springframework.stereotype.Service;
+
+import com.coding404.command.FreeBoardVO;
+
+@Service("freeBoardService")
+public class FreeBoardServiceImpl implements FreeBoardService {
+
+	@Override
+	public int regist(FreeBoardVO vo) {
+		
+		System.out.println(vo.toString());
+		
+		return 0;
+	}
+
+}
