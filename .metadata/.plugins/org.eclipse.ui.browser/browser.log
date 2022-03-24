@@ -131,3 +131,11 @@
 3월 23, 2022 19:08:56.251 [27436:27112:0323/190856.251:ERROR:mcs_client.cc(755)] Received close command, resetting connection.
 3월 23, 2022 23:34:40.471 [27436:10936:0323/233440.471:ERROR:device_event_log_impl.cc(214)] [23:34:40.467] USB: usb_service_win.cc:260 Failed to get device driver name: 요소가 없습니다. (0x490)
 3월 23, 2022 23:34:40.481 [27436:10936:0323/233440.481:ERROR:device_event_log_impl.cc(214)] [23:34:40.478] USB: usb_service_win.cc:283 SetupDiEnumDeviceInterfaces: 사용 가능한 데이터가 없습니다. (0x103)
+
+3월 24, 2022 09:43:03.394 NEW SESSION
+3월 24, 2022 09:43:03.394 [9956:29840:0324/094303.392:ERROR:device_event_log_impl.cc(214)] [09:43:03.393] USB: usb_service_win.cc:354 Could not get child device's service name: 요소가 없습니다. (0x490)
+3월 24, 2022 09:43:03.395 [9956:29840:0324/094303.395:ERROR:device_event_log_impl.cc(214)] [09:43:03.395] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 24, 2022 11:19:28.594 [16652:15644:0324/111928.591:ERROR:device_event_log_impl.cc(214)] [11:19:28.592] USB: usb_service_win.cc:354 Could not get child device's service name: 요소가 없습니다. (0x490)
+3월 24, 2022 11:19:28.594 [16652:15644:0324/111928.594:ERROR:device_event_log_impl.cc(214)] [11:19:28.595] USB: usb_device_handle_win.cc:1049 Failed to read descriptor from node connection: 시스템에 부착된 장치가 작동하지 않습니다. (0x1F)
+3월 24, 2022 16:25:00.709 [16652:15644:0324/162500.708:ERROR:gpu_process_host.cc(972)] GPU process exited unexpectedly: exit_code=34
+3월 24, 2022 16:25:00.836 [16652:15644:0324/162500.836:ERROR:device_event_log_impl.cc(214)] [16:25:00.836] USB: usb_service_win.cc:260 Failed to get device driver name: 요소가 없습니다. (0x490)

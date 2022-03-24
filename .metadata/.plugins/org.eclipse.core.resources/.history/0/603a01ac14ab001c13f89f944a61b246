@@ -1,0 +1,36 @@
+package com.coding404.util;
+
+public class PageVO {
+	// 페이지네이션을 그리는 역할
+	
+	private int startPage; // 페이지네이션 첫번호
+	private int endPage; // 페이지네이션 끝번호
+	private boolean prev; // 이전버튼
+	private boolean next; // 다음버튼
+	
+	private int pageNum; // 조회하는 페이지 번호
+	private int amount; // 조회하는 데이터갯수
+	private int total; // 전체게시글 수
+	
+	private Criteria cri; // 페이지 기준
+	
+	public PageVO(Criteria cri, int total) {
+		this.pageNum = cri.getPageNum();
+		this.amount = cri.getAmount();
+		this.total = total;
+		this.cri = cri;
+		
+		// 페이지 계산
+		// 끝페이지 계산
+		// pageNum이 11이라면, 페이지네이션 끝번호는 20
+		// (int)Math.ceil(조회하는 페이지번호 / 페이지네이션 수) * 페이지네이션 수
+		this.endPage = (int)Math.ceil(this.pageNum / 10.0) * 10;
+		
+		// 첫페이지 계산
+		// 시작페이지는 = 페이지네이션 끝번호 - 페이지네이션 수 + 1
+		this.startPage = this.endPage - 10 + 1;
+	}
+	
+	
+	
+}

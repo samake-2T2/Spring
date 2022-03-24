@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="com.coding404.freeboard.service.FreeBoardMapper">
+
+	<insert id="regist">
+		insert into freeboard(bno, writer, title, content)
+		values(freeboard_seq.nextval, #{writer}, #{title}, #{content})
+	</insert>
+
+	<!-- CDATA로 감싼 값을 순수한 문자열 형태로 인식시킴 -->
+	<select id="getList" resultType="FreeBoardVO">
+		<![CDATA[
+		SELECT
+		*
+		FROM
+		(
+		SELECT
+		ROWNUM rn,
+		a.*
+		FROM
+		(
+		SELECT
+		*
+		FROM
+		freeboard
+		ORDER BY
+		bno DESC
+		) a
+		)
+		WHERE
+		rn > (#{pageNum}-1) * #{amount}
+		AND rn <= #{pageNum} * #{amount}
+		]]>
+	</select>
+
+	<select id="getContent" resultType="FreeBoardVO">
+		select * from freeboard where
+		bno = #{bno}
+	</select>
+
+	<update id="update">
+		update freeboard set content=#{content},
+		title=#{title}, updatedate=sysdate where bno = #{bno}
+	</update>
+
+	<delete id="delete">
+		delete from freeboard where bno = #{bno}
+	</delete>
+	
+	<select id="getTotal" resultType="int">
+		select count(*) as total from freeboard
+	</select>
+
+</mapper>
